@@ -5,10 +5,12 @@ const {Schema} = mongoose
 const taskSchema = new Schema({
     name:{
         type:String,
-        required:[true,"Enter a name for your task"]
+        required:[true,"Enter a name for your task"],
+        trim:true
     },
     completed:{
-        type:String
+        type:String,
+        default:false
     }
 })
 
